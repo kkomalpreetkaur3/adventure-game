@@ -23,6 +23,10 @@ function showQuestion() {
         const li = document.createElement("li");
         const button = document.createElement("button");
         button.textContent = answer.text;
+        button.onclick = () => {
+            currentQuestionIndex = answer.next;
+            showQuestion();
+        };
         li.appendChild(button);
         answersElement.appendChild(li);
     });
