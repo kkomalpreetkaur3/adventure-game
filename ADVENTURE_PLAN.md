@@ -1,40 +1,41 @@
 # Space Explorer Adventure Plan
 
 ## Game Concept
-This is a simple space exploration adventure game that runs in the browser.The player is an astronaut exploring a mysterious alien planet. The player makes choices that affect the storyline and reach different outcomes.
+This is a simple space exploration adventure game that runs in the browser.The player is an astronaut traveling through space, making choices where to explore.The player makes choices that affect the storyline and reach different outcomes.
 It demonstrates HTML, CSS and JavaScript skills.
 
 ## Storyline Overview
-- Theme:  Space exploration on an alien planet.
-- Goal: Survive the planet and find a spaceship to escape.
-- Starting Point: The player lands on the alien planet and must choose which path to explore first.  
+- Theme:  Space exploration and discovery.
+- Goal: Explore the universe and uncover new mysteries.
+- Starting Point: The player leaves Earth to begin their adventure.
 - Choices: Each choice leads to a different branch of the story.   
-- Endings: Safe escape, trapped by aliens, or discover alien treasure.   
+- Endings: Alien technology, rare moon rocks, alien transmission, or a warp to another galaxy.
 
 ## Main Scenes and Choices
 ### Start Scene
-- Explore the cave -> leads to cave scene.  
-- Explore the crater -> leads to crater scene.
+- Explore the Moon -> leads to Moon base or moon rocks ending.
+- Travel to Saturn -> leads to Saturn rings scene.
+- Venture into Deep Space -> leads to drive choice.
 
-### Cave Scene
-- Touch the glowing crystal -> treasure ending.  
-- Leave the crystal -> alien ambush (bad ending). 
+### Moon Scene
+- Explore alien base -> discover alien technology (success ending).
+- Collect moon rocks -> return safely with rare samples (success ending).
 
-### Crater Scene
-- Investigate alien symbols -> alien ambush (bad ending).  
-- Retreat to spaceship -> safe escape ending.
+### Saturn Scene
+- tudy the rings -> discover rare minerals (success ending).
+- Search nearby moon -> intercepted by alien signal (mystery ending).
 
-### Treasure Scene
-- Player finds powerful alien artifact -> success ending.  
-- Option to play again -> returns to start scene.  
+### Deep Space Scene
+- Activate warp drive -> warp beyond the galaxy (unknown ending).
+- Stay on course -> lost in deep space (game over).
 
-### Alien Ambush Scene
-- Aliens trap the player -> game over.  
-- Option to play again -> returns to start scene.
-
-### Safe Zone Scene
-- Player retreats to spaceship safely -> success ending.  
-- Option to play again -> returns to start scene.
+### Ending Scenes
+- Alien Technology: Player finds advanced alien tech.
+- Rare Moon Rocks: Player safely returns with unique samples.
+-Alien Transmission: Player hears mysterious alien messages.
+-Galaxy Warp: Player is launched beyond known space.
+- Lost in Space: Player drifts endlessly in the void.
+- Each ending allows the player to restart the game.
 
 ## Technical Breakdown
 ### index.html
@@ -46,27 +47,25 @@ It demonstrates HTML, CSS and JavaScript skills.
 - Focus on minimal, clean layout that supports readability.  
 
 ### script.js  
-- Stores game scenes and choices as objects.  
-- Dynamically updates story text and choice buttons on user interaction.  
-- Uses 'loadScene(sceneName)' function to manage navigation between story paths.  
+- Uses a questions[] array of objects to store scenes and choices.
+- showQuestion() dynamically updates the story text and choices.
+- nextQuestion() resets the game or moves to the next scene.
 
 ### DEBUGGING_ANALYSIS  
 - Contains breakpoints screenshots and 'DEBUGGER_STEPS.md' to explain testing process.
 
 ## Debugging Plan
 Use browser DevTools to set breakpoints in 'script.js' at:
-  1. Start of 'loadScene' function.
-  2. Inside the button onclick event.
-  3. End of 'loadScene' to verify buttons are correctly created.
-- Inspect variables like 'sceneName' and 'scene.text' to ensure correct story progression.  
-- Play through all paths to confirm each choice leads to the intended outcome.  
+   1. The start of showQuestion() to confirm question loading.
+   2. Inside the answer button event handler to confirm correct choices.
+   3. The end of showQuestion() to ensure the correct text and options display.
+Test by clicking through all paths to verify each scene leads to the intended ending.
 
 ## Possible Extensions
-- Add images for each scene (crater, cave, spaceship).
-- Include background music or sound effects for choices.
-- Add more storybranches with multiple hidden endings.
-- Track player choices for achievements or score.
-
+- Add background images for Moon, Saturn and Deep Space.
+- Include sound effects like rocket launch or alien signals.
+- Expand with more planets and hidden endings.
+- Track number of successful missions.
 
 
 
