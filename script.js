@@ -59,8 +59,11 @@ function showQuestion() {
         answersElement.appendChild(li);
     });
 
-    document.getElementById("next-btn").style.display =
-        currentQuestion.answers.length === 0 ? "none" : "block";
+    if (currentQuestion.answers.length === 0) {
+        document.getElementById("next-btn").style.display = "inline-block";
+    } else {
+        document.getElementById("next-btn").style.display = "none";
+    }
 }
 
 function nextQuestion() {
